@@ -13,7 +13,6 @@ class App extends Component {
   };
 
   handlebackgroundImage = data => {
-    console.log('I was called');
     switch (data) {
       case 'Thunderstorm':
         this.setState({
@@ -110,7 +109,7 @@ class App extends Component {
           </div>
         </div>
 
-        <div class='w-full sm:w-1/2 h-12 h-screen relative  md:w-1/4'>
+        <div className='w-full sm:w-1/2 h-12 h-screen relative  md:w-1/4'>
           <div
             style={{
               filter: 'blur(4px)',

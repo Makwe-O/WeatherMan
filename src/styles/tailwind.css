@@ -22,6 +22,7 @@ html {
 
 body {
   margin: 0;
+  font-family: 'Comfortaa', cursive;
 }
 
 /**
@@ -54438,3 +54439,4 @@ video {
     z-index: auto;
   }
 }
+

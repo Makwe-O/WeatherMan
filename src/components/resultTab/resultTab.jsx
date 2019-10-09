@@ -3,8 +3,6 @@ import { motion } from 'framer-motion';
 import moment from 'moment';
 import { ReactComponent as Cloudy } from '../../assets/cloudy.svg';
 const ResultTab = props => {
-  console.log(props);
-
   return (
     <motion.div
       animate={{ y: -50 }}
@@ -15,7 +13,7 @@ const ResultTab = props => {
         <>
           <div className='px-0 md:px-8'>
             <h1 className='font-sans text-3xl font-semibold md:text-6xl'>
-              {props.result.main.temp}
+              {props.result.main.temp}F
             </h1>
           </div>
           <div className=' px-0 md:px-8'>
