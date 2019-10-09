@@ -98,7 +98,7 @@ class App extends Component {
           background: `linear-gradient(0deg,rgba(0,0,0,0.9),rgba(0,0,0,0.1)), url(${this.state.background})`
         }}
       >
-        <div className=' px-20 w-3/4  h-12 h-screen relative'>
+        <div className='hidden px-20 sm:block sm:w-1/2  h-12 h-screen relative md:w-3/4'>
           <div className=' mt-4 flex'>
             <div className='w-10'>
               <Rain />
@@ -110,16 +110,16 @@ class App extends Component {
           </div>
         </div>
 
-        <div class='w-1/4 h-12 h-screen relative'>
+        <div class='w-full sm:w-1/2 h-12 h-screen relative  md:w-1/4'>
           <div
             style={{
               filter: 'blur(4px)',
               background:
                 'linear-gradient(180deg, rgba(99,179,237,0.1) 0%, rgba(0,0,0,1) 100%)'
             }}
-            className='absolute  h-screen w-full'
+            className='hidden sm:block absolute  h-screen w-full'
           ></div>
-          <div className='absolute'>
+          <div className='relative sm:absolute'>
             <Sidebar
               onSearchchange={this.handleChange}
               onSearchSubmit={this.handleSubmit}

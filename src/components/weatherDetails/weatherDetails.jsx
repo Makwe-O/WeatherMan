@@ -1,12 +1,17 @@
 import React from 'react';
+import { motion } from 'framer-motion';
 const WeatherDetails = props => {
   console.log(props);
   return (
-    <div className='my-32 text-gray-200 '>
-      <h2 className='text-3xl font-medium mb-10'>Weather Details</h2>
+    <motion.div
+      animate={{ y: -50 }}
+      transition={{ duration: 2 }}
+      className='my-32 text-gray-200 '
+    >
+      <h2 className='text-xl font-medium mb-10 md:text-3xl'>Weather Details</h2>
       {props.result.name ? (
         <div>
-          <div className='text-l my-8 flex justify-between'>
+          <div className='text-sm my-8 flex justify-between md:text-l'>
             <div>
               <p>Temperature</p>
             </div>
@@ -14,7 +19,7 @@ const WeatherDetails = props => {
               <p>{props.result.main.temp}F</p>
             </div>
           </div>
-          <div className='text-l my-8 flex justify-between'>
+          <div className='text-sm my-8 flex justify-between md:text-l'>
             <div>
               <p>Humidity</p>
             </div>
@@ -22,7 +27,7 @@ const WeatherDetails = props => {
               <p>{props.result.main.humidity}%</p>
             </div>
           </div>
-          <div className='text-l my-8 flex justify-between'>
+          <div className='text-sm my-8 flex justify-between md:text-l'>
             <div>
               <p>Wind</p>
             </div>
@@ -30,7 +35,7 @@ const WeatherDetails = props => {
               <p>{props.result.wind.speed}km/h</p>
             </div>
           </div>
-          <div className='text-l my-8 flex justify-between'>
+          <div className='text-sm my-8 flex justify-between md:text-l'>
             <div>
               <p>Pressure</p>
             </div>
@@ -42,7 +47,7 @@ const WeatherDetails = props => {
       ) : (
         <div></div>
       )}
-    </div>
+    </motion.div>
   );
 };
 
